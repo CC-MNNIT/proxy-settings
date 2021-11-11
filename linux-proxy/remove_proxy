@@ -1,8 +1,7 @@
 #!/bin/bash
 #Author: Nishchal Siddharth Pandey
-#Last Modified: 29/01/2019 5:31 PM
 
-echo "Created by Nishchal Siddharth [GitHub: nisiddharth], last modified: 29/01/2019 5:31 PM"
+echo "Created by Nishchal Siddharth [GitHub: nisiddharth]"
 echo ""
 
 # Removing proxies from environment variables
@@ -12,6 +11,11 @@ sudo sed -i '/https_proxy/d' /etc/environment
 sudo sed -i '/ftp_proxy/d' /etc/environment
 sudo sed -i '/socks_proxy/d' /etc/environment
 sudo sed -i '/all_proxy/d' /etc/environment
+sudo sed -i '/HTTP_PROXY/d' /etc/environment
+sudo sed -i '/HTTPS_PROXY/d' /etc/environment
+sudo sed -i '/FTP_PROXY/d' /etc/environment
+sudo sed -i '/SOCKS_PROXY/d' /etc/environment
+sudo sed -i '/ALL_PROXY/d' /etc/environment
 # these are to remove the trailing newlines
 sudo perl -i -pe 'chomp if eof' /etc/environment
 sudo perl -i -pe 'chomp if eof' /etc/environment

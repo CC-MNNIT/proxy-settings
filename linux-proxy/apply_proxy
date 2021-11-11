@@ -1,8 +1,7 @@
 #!/bin/bash
 #Author: Nishchal Siddharth Pandey
-#Last Modified: 29/01/2019 5:31 PM
 
-echo "Created by Nishchal Siddharth [GitHub: nisiddharth], last modified 29/01/2019 5:31 PM"
+echo "Created by Nishchal Siddharth [GitHub: nisiddharth]"
 echo ""
 echo "This is for MNNIT campus proxy only, adds 'edcguest' as Username and Password and uses 3128 as Port number"
 read -p "Please enter the proxy host you want to apply (eg, 172.31.100.29) : " proxy
