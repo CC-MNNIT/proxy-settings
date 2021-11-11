@@ -32,6 +32,8 @@ export https_proxy="http://edcguest:edcguest@172.31.100.29:3128"
 export all_proxy="http://edcguest:edcguest@172.31.100.29:3128"
 ```
 
+You can also add these 3 lines to your `~/.bashrc` (or `~.zshrc` if using `zsh`) or `~/.profile` so that these are exported every time you open a terminal.
+
 ## For GNU/Linux, permanent solution:
 
 - Enter proxy port info in System network settings. (not needed if you are using the following script).
