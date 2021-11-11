@@ -49,6 +49,20 @@ Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [th
 
 [Follow link.](https://gist.github.com/evantoli/f8c23a37eb3558ab8765)
 
+## For NPM:
+* Applying Proxy (You can change the Proxy according to your needs, this is just an example with Proxy `172.31.100.14`) -
+ 
+    ```bash
+    npm config set proxy http://edcguest:edcguest@172.31.100.14:3128
+    npm config set https-proxy http://edcguest:edcguest@172.31.100.14:3128
+    ```
+* Removing Proxy - 
+
+    ```bash
+    npm config rm proxy
+    npm config rm https-proxy
+    ```
+    
 ## List of proxies available:
 
 <a href="Proxies-2022.jpg"><img src="Proxies-2022.jpg"  alt="List of proxies available" height="400"/></a>
