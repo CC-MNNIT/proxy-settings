@@ -28,11 +28,21 @@ Run these:
 
 ```bash
 export http_proxy="http://edcguest:edcguest@172.31.100.29:3128"
-export https_proxy="http://edcguest:edcguest@172.31.100.29:3128"
+export https_proxy="https://edcguest:edcguest@172.31.100.29:3128"
+export ftp_proxy="ftp://edcguest:edcguest@172.31.100.29:3128"
+export socks_proxy="socks://edcguest:edcguest@172.31.100.29:3128"
 export all_proxy="http://edcguest:edcguest@172.31.100.29:3128"
+
+export HTTP_PROXY="http://edcguest:edcguest@172.31.100.29:3128"
+export HTTPS_PROXY="https://edcguest:edcguest@172.31.100.29:3128"
+export FTP_PROXY="ftp://edcguest:edcguest@172.31.100.29:3128"
+export SOCKS_PROXY="socks://edcguest:edcguest@172.31.100.29:3128"
+export ALL_PROXY="http://edcguest:edcguest@172.31.100.29:3128"
 ```
 
-You can also add these 3 lines to your `~/.bashrc` (or `~.zshrc` if using `zsh`) or `~/.profile` so that these are exported every time you open a terminal.
+(Uppercases ones are optional, sometimes lowercases ones don't work). Read answers to [this Stackoverflow question](https://unix.stackexchange.com/questions/212894/whats-the-right-format-for-the-http-proxy-environment-variable-caps-or-no-ca).
+
+You can also add these 6 lines to your `~/.bashrc` (or `~.zshrc` if using `zsh`) or `~/.profile` so that these are exported every time you open a terminal.
 
 ## For GNU/Linux, permanent solution:
 

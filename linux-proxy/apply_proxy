@@ -18,6 +18,11 @@ sudo sed -i '/https_proxy/d' /etc/environment
 sudo sed -i '/ftp_proxy/d' /etc/environment
 sudo sed -i '/socks_proxy/d' /etc/environment
 sudo sed -i '/all_proxy/d' /etc/environment
+sudo sed -i '/HTTP_PROXY/d' /etc/environment
+sudo sed -i '/HTTPS_PROXY/d' /etc/environment
+sudo sed -i '/FTP_PROXY/d' /etc/environment
+sudo sed -i '/SOCKS_PROXY/d' /etc/environment
+sudo sed -i '/ALL_PROXY/d' /etc/environment
 # these are to remove the trailing newlines
 sudo perl -i -pe 'chomp if eof' /etc/environment
 sudo perl -i -pe 'chomp if eof' /etc/environment
@@ -49,6 +54,7 @@ sudo perl -i -pe 'chomp if eof' /etc/environment
 sudo perl -i -pe 'chomp if eof' /etc/environment
 # adding
 sudo sh -c "echo '\nhttp_proxy=http://edcguest:edcguest@$proxy:3128/\nhttps_proxy=https://edcguest:edcguest@$proxy:3128/\nftp_proxy=ftp://edcguest:edcguest@$proxy:3128/\nsocks_proxy=socks://edcguest:edcguest@$proxy:3128/\nall_proxy=socks://edcguest:edcguest@$proxy:3128/\n' >> /etc/environment"
+sudo sh -c "echo '\nHTTP_PROXY=http://edcguest:edcguest@$proxy:3128/\nHTTPS_PROXY=https://edcguest:edcguest@$proxy:3128/\nFTP_PROXY=ftp://edcguest:edcguest@$proxy:3128/\nSOCKS_PROXY=socks://edcguest:edcguest@$proxy:3128/\nALL_PROXY=socks://edcguest:edcguest@$proxy:3128/\n' >> /etc/environment"
 echo "done."
 
 # Adding proxies to apt package manager
