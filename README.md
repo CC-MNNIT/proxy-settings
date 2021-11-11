@@ -39,7 +39,7 @@ export all_proxy="http://edcguest:edcguest@172.31.100.29:3128"
 
 ## For MacOS:
 
-Try [this](https://support.apple.com/en-in/guide/safari/ibrw1053/mac).
+Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [this](https://support.apple.com/en-in/guide/safari/ibrw1053/mac).
 
 ## For Android Studio (Gradle):
 
