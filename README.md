@@ -1,18 +1,22 @@
 # MNNIT College internet proxy settings
 
+In the below listed steps you can replace "172.31.100.29" with the proxy of your choice (based on speed/availability).
+
 ## For Windows:
 
-- Add proxy in system proxy settings.
+- Add proxy in system proxy settings [Settings > Network & Internet > Proxy].
 - Use one of the following:
     - [Proxifier](https://www.proxifier.com/)
     - [Psiphon Pro (VPN)](https://psiphon.ca/)
 - In Command Prompt, for temporary proxy settings:
     ```bash
-    set http_proxy=http://edcguest:edcguest@proxy:3128
-    set https_proxy=https://edcguest:edcguest@proxy:3128
+    set http_proxy=http://edcguest:edcguest@172.31.100.29:3128
+    set https_proxy=https://edcguest:edcguest@172.31.100.29:3128
     ```
 
 ## For Android:
+
+Use any one of these and enter appropriate settings in them:
 
 - [College Proxy](https://play.google.com/store/apps/details?id=com.cell47.College_Proxy&hl=en_IN&gl=US)
 - [Psiphon Pro (VPN)](https://psiphon.ca/)
@@ -23,14 +27,15 @@
 Run these:
 
 ```bash
-export http_proxy="http://edcguest:edcguest@proxy:3128"
-export https_proxy="http://edcguest:edcguest@proxy:3128"
-export all_proxy="http://edcguest:edcguest@proxy:3128"
+export http_proxy="http://edcguest:edcguest@172.31.100.29:3128"
+export https_proxy="http://edcguest:edcguest@172.31.100.29:3128"
+export all_proxy="http://edcguest:edcguest@172.31.100.29:3128"
 ```
 
 ## For GNU/Linux, permanent solution:
 
-[Use these scripts.](linux-proxy)
+- Enter proxy port info in System network settings. (not needed if you are using the following script).
+- [Use these scripts.](linux-proxy)
 
 ## For Android Studio (Gradle):
 
