@@ -37,6 +37,10 @@ export all_proxy="http://edcguest:edcguest@172.31.100.29:3128"
 - Enter proxy port info in System network settings. (not needed if you are using the following script).
 - [Use these scripts.](linux-proxy)
 
+## For MacOS:
+
+Try [this](https://support.apple.com/en-in/guide/safari/ibrw1053/mac).
+
 ## For Android Studio (Gradle):
 
 [Follow link.](https://developer.android.com/studio/intro/studio-config?fbclid=IwAR0AfsH_nW9CUVs4knWtDnvTsdcvXEw4zCquF5AGGQLVxH7xfqomn5EqY0I#proxy)
