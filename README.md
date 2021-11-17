@@ -13,6 +13,7 @@ In the below listed steps you can replace "172.31.100.29" with the proxy of your
     set http_proxy=http://edcguest:edcguest@172.31.100.29:3128
     set https_proxy=https://edcguest:edcguest@172.31.100.29:3128
     ```
+- For Lan Configuration Settings, [follow this](lan/README.md).
 
 ## For Android:
 
