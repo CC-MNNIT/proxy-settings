@@ -42,6 +42,8 @@ Follow these steps to configure LAN connection in your pc.
 
 ## For Linux :
 
+> Note - Some settings may vary based on your Distro. This reference uses !POP OS.
+
 1. Find Wired Network in Settings and click on the settings icon.
 
 <p align="center">
