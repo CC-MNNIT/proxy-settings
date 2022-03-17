@@ -4,6 +4,13 @@
 echo "Created by Nishchal Siddharth [GitHub: nisiddharth]"
 echo ""
 echo "This is for MNNIT campus proxy only, adds 'edcguest' as Username and Password and uses 3128 as Port number"
+
+# don't let script run as root
+if (( $EUID == 0 )); then
+    echo "\n\nPlease DON'T run as root!\n"
+    exit
+fi
+
 read -p "Please enter the proxy host you want to apply (eg, 172.31.100.29) : " proxy
 echo ""
 echo "Setting up $proxy"
@@ -38,12 +45,6 @@ sudo perl -i -pe 'chomp if eof' /etc/apt/apt.conf
 sudo perl -i -pe 'chomp if eof' /etc/apt/apt.conf
 echo "done."
 
-# Removing proxies from snap package manager
-echo "Removing proxies from snap package manager"
-sudo snap set system proxy.http=
-sudo snap set system proxy.https=
-echo "done."
-
 # Adding #######################################################################
 
 # Adding proxies to environment variables
@@ -52,8 +53,8 @@ echo "Adding proxies to environment variables"
 sudo perl -i -pe 'chomp if eof' /etc/environment
 sudo perl -i -pe 'chomp if eof' /etc/environment
 # adding
-sudo sh -c "echo '\nhttp_proxy=http://edcguest:edcguest@$proxy:3128/\nhttps_proxy=https://edcguest:edcguest@$proxy:3128/\nftp_proxy=ftp://edcguest:edcguest@$proxy:3128/\nsocks_proxy=socks://edcguest:edcguest@$proxy:3128/\nall_proxy=socks://edcguest:edcguest@$proxy:3128/\n' >> /etc/environment"
-sudo sh -c "echo '\nHTTP_PROXY=http://edcguest:edcguest@$proxy:3128/\nHTTPS_PROXY=https://edcguest:edcguest@$proxy:3128/\nFTP_PROXY=ftp://edcguest:edcguest@$proxy:3128/\nSOCKS_PROXY=socks://edcguest:edcguest@$proxy:3128/\nALL_PROXY=socks://edcguest:edcguest@$proxy:3128/\n' >> /etc/environment"
+sudo sh -c "echo '\nhttp_proxy=http://edcguest:edcguest@$proxy:3128/\nhttps_proxy=https://edcguest:edcguest@$proxy:3128/\nftp_proxy=ftp://edcguest:edcguest@$proxy:3128/\n' >> /etc/environment"
+sudo sh -c "echo '\nHTTP_PROXY=http://edcguest:edcguest@$proxy:3128/\nHTTPS_PROXY=https://edcguest:edcguest@$proxy:3128/\nFTP_PROXY=ftp://edcguest:edcguest@$proxy:3128/\n' >> /etc/environment"
 echo "done."
 
 # Adding proxies to apt package manager
@@ -62,7 +63,7 @@ echo "Adding proxies to apt package manager"
 sudo perl -i -pe 'chomp if eof' /etc/apt/apt.conf
 sudo perl -i -pe 'chomp if eof' /etc/apt/apt.conf
 # adding
-sudo sh -c "echo '\nAcquire::http::proxy \"http://edcguest:edcguest@$proxy:3128/\";\nAcquire::https::proxy \"https://edcguest:edcguest@$proxy:3128/\";\nAcquire::ftp::proxy \"ftp://edcguest:edcguest@$proxy:3128/\";\nAcquire::socks::proxy \"socks://edcguest:edcguest@$proxy:3128/\";\n' >> /etc/apt/apt.conf"
+sudo sh -c "echo '\nAcquire::http::proxy \"http://edcguest:edcguest@$proxy:3128/\";\nAcquire::https::proxy \"https://edcguest:edcguest@$proxy:3128/\";\nAcquire::ftp::proxy \"ftp://edcguest:edcguest@$proxy:3128/\";\n' >> /etc/apt/apt.conf"
 echo "done."
 
 # Applying proxies to snap package manager
@@ -80,8 +81,6 @@ echo "Applying proxy settings in dconf"
 /usr/bin/gsettings set org.gnome.system.proxy.https port 3128
 /usr/bin/gsettings set org.gnome.system.proxy.ftp host "edcguest:edcguest@$proxy"
 /usr/bin/gsettings set org.gnome.system.proxy.ftp port 3128
-/usr/bin/gsettings set org.gnome.system.proxy.socks host "edcguest:edcguest@$proxy"
-/usr/bin/gsettings set org.gnome.system.proxy.socks port 3128
 echo "done."
 
 # Applying proxy settings to git
@@ -90,7 +89,12 @@ git config --global http.proxy http://edcguest:edcguest@$proxy:3128
 git config --global https.proxy http://edcguest:edcguest@$proxy:3128
 echo "done."
 
+# Applying proxy settings to npm
+echo "Applying proxy settings to npm"
+npm config set proxy http://edcguest:edcguest@$proxy:3128
+npm config set https-proxy http://edcguest:edcguest@$proxy:3128
+echo "done."
+
 # All done!
 echo ""
 echo "All done! $proxy successfully applied, if connectivity problem still persists please consider logging out then in or rebooting your system."
-

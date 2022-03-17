@@ -14,18 +14,24 @@
 Open terminal in the directory in which [`apply_proxy`](apply_proxy), [`remove_proxy`](remove_proxy) are present.
 
 To set proxy enter the command:
+
 ```bash
 ./apply_proxy
 ```
+
 and enter the proxy host name you want to use.
 
 To unset enter the command:
+
 ```bash
 ./remove_proxy
 ```
+
+**NOTE:** If you are using KDE Plasma desktop, turn on "System Settings > Network > Settings > Proxy > Use system proxy configuration" for easy proxyfication.
+
 <hr>
 
-## TO USE IT FROM ANYWHERE:
+## TO USE THE SCRIPT FROM ANYWHERE:
 
 If you want the flexibility to use the script from anywhere and not only the directory in which it is kept, put the scripts in `~/.local/bin/` directory.
 

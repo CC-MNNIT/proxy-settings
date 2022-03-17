@@ -2,7 +2,8 @@
 
 Follow these steps to configure LAN connection in your pc.
 
-## For Windows :
+## For Windows:
+
 1. Add proxy in system proxy settings [Settings > Network & Internet > Proxy].
 
 2. Press *win+R* key, and type **ncpa.cpl** on the dialog box that appears.
@@ -40,7 +41,7 @@ Follow these steps to configure LAN connection in your pc.
 <hr>
 <br>
 
-## For Linux :
+## For Linux:
 
 > Note - Some settings may vary based on your Distro. This reference uses !POP OS.
 
@@ -56,7 +57,7 @@ Follow these steps to configure LAN connection in your pc.
 <img src="l2.jpeg">
 </p>
 
-3. Find the Ip address, subnet mask and default gateway for your room in this [PDF](tagore_ip.pdf). For DNS, use the same address as mentioned in the image. Click Apply to save the settings.
+3. Find the IP address, subnet mask and default gateway for your room in this [PDF](tagore_ip.pdf). For DNS, use the same address as mentioned in the image. Click Apply to save the settings.
 
 <p align="center">
 <img src="l3.jpeg">
@@ -68,6 +69,6 @@ Follow these steps to configure LAN connection in your pc.
 <img src="l4.jpeg">
 </p>
 
-> Note - These Settings apply only to Tagore hostel.
+>> Note: These settings apply to Tagore hostel. Other hostels have DHCP support, but static IP configuration might be needed sometimes if IP conflict occurs.
 
 <hr>

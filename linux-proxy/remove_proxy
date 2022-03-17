@@ -4,6 +4,12 @@
 echo "Created by Nishchal Siddharth [GitHub: nisiddharth]"
 echo ""
 
+# don't let script run as root
+if (( $EUID == 0 )); then
+    echo "\n\nPlease DON'T run as root!\n"
+    exit
+fi
+
 # Removing proxies from environment variables
 echo "Removing proxies from environment variables"
 sudo sed -i '/http_proxy/d' /etc/environment
@@ -48,6 +54,12 @@ echo "Removing dconf setting"
 echo "Removing proxy settings from git"
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+echo "done."
+
+# Removing proxy settings from npm
+echo "Removing proxy settings from npm"
+npm config rm proxy
+npm config rm https-proxy
 echo "done."
 
 # All done!
