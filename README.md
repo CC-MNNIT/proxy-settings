@@ -11,7 +11,7 @@ In the below listed steps you can replace "172.31.102.29" with the proxy of your
 - In Command Prompt, for temporary proxy settings:
     ```bash
     set http_proxy=http://edcguest:edcguest@172.31.102.29:3128
-    set https_proxy=https://edcguest:edcguest@172.31.102.29:3128
+    set https_proxy=http://edcguest:edcguest@172.31.102.29:3128
     ```
 - For LAN Configuration Settings, [follow this](lan/README.md).
 
@@ -29,12 +29,12 @@ Run these:
 
 ```bash
 export http_proxy="http://edcguest:edcguest@172.31.102.29:3128"
-export https_proxy="https://edcguest:edcguest@172.31.102.29:3128"
-export ftp_proxy="ftp://edcguest:edcguest@172.31.102.29:3128"
+export https_proxy="http://edcguest:edcguest@172.31.102.29:3128"
+export ftp_proxy="http://edcguest:edcguest@172.31.102.29:3128"
 
 export HTTP_PROXY="http://edcguest:edcguest@172.31.102.29:3128"
-export HTTPS_PROXY="https://edcguest:edcguest@172.31.102.29:3128"
-export FTP_PROXY="ftp://edcguest:edcguest@172.31.102.29:3128"
+export HTTPS_PROXY="http://edcguest:edcguest@172.31.102.29:3128"
+export FTP_PROXY="http://edcguest:edcguest@172.31.102.29:3128"
 ```
 
 (Uppercases ones are optional, sometimes lowercases ones don't work). Read answers to [this Stackoverflow question](https://unix.stackexchange.com/questions/212894/whats-the-right-format-for-the-http-proxy-environment-variable-caps-or-no-ca).
