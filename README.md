@@ -76,6 +76,9 @@ Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [th
   npm config rm proxy
   npm config rm https-proxy
   ```
+## For Docker
+
+[Follow link.](https://docs.docker.com/network/proxy/)
 
 ## List of proxies available:
 
