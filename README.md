@@ -29,7 +29,7 @@ Use any one of these and enter appropriate settings in them:
 
   and;
 
-- **[Use these scripts.](linux-proxy)**
+- **[Use these scripts](linux-proxy)**. Read the README present at the link.
 
 ## For Linux/Mac terminal, temporary solution:
 
@@ -83,4 +83,4 @@ Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [th
 
 <hr>
 
-_Have a suggestion? Create a GitHub issue or contact CC Coordinators!_
+_Have a suggestion? Create a GitHub issue or [contact CC Coordinators](https://cc-mnnit.github.io/#current-representatives)!_

@@ -9,6 +9,10 @@
 
 <hr>
 
+*This is script assumes you are using a debian based distribution like Ubuntu/ Kubuntu/ Linux Mint/ KDE Neon, Pop!_OS, etc. But in case you use Arch based or Centos/RHEL distribution you modify the script accordingly byreferring to [this document](linux-proxy-extras.md).*
+
+<hr>
+
 ## TO USE:
 
 Open terminal in the directory in which [`apply_proxy`](apply_proxy), [`remove_proxy`](remove_proxy) are present.
@@ -50,6 +54,8 @@ curl https://raw.githubusercontent.com/cc-mnnit/proxy-settings/main/linux-proxy/
 
 `apply_proxy` adds (or applies) proxy related lines (or settings) in 1. `/etc/environment`, 2. `snap`, 3. `/apt/apt.conf`, 3. `dconf` (org.gnome.system.proxy) and 4. `git`.
 
+Some more details are present in [this document](linux-proxy-extras.md).
+
 You are using this shell script on your sole responsibility. Do keep a backup of `/etc/environment` as a safety measure. If anything wrong happens or you system bricks, don't blame it on me.
 
 I would suggest you to first understand what is in the scripts before executing them.
@@ -58,6 +64,6 @@ I would suggest you to first understand what is in the scripts before executing 
 
 <br>
 
-Have a suggestion? Create a git issue or contact CC Coordinators!
+Have a suggestion? Create a git issue or [contact CC Coordinators](https://cc-mnnit.github.io/#current-representatives)!
 
 *Thank You!*
