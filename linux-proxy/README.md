@@ -9,7 +9,7 @@
 
 <hr>
 
-*This is script assumes you are using a debian based distribution like Ubuntu/ Kubuntu/ Linux Mint/ KDE Neon, Pop!_OS, etc. But in case you use Arch based or Centos/RHEL distribution you modify the script accordingly byreferring to [this document](linux-proxy-extras.md).*
+*This is script assumes you are using a debian based distribution like Ubuntu/ Kubuntu/ Linux Mint/ KDE Neon, Pop!_OS, etc. But in case you use Arch based or Centos/RHEL distribution you modify the script accordingly by referring to [this document](linux-proxy-extras.md).*
 
 <hr>
 
