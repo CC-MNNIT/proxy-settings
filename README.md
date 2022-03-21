@@ -6,13 +6,13 @@ In the below listed steps you can replace "172.31.102.29" with the proxy of your
 
 - Add proxy in system proxy settings [Settings > Network & Internet > Proxy].
 - Use one of the following:
-    - [Proxifier](https://www.proxifier.com/)
-    - [Psiphon Pro (VPN)](https://psiphon.ca/)
+  - [Proxifier](https://www.proxifier.com/). Configuration [details here](proxifier).
+  - [Psiphon Pro (VPN)](https://psiphon.ca/)
 - In Command Prompt, for temporary proxy settings:
-    ```bash
-    set http_proxy=http://edcguest:edcguest@172.31.102.29:3128
-    set https_proxy=http://edcguest:edcguest@172.31.102.29:3128
-    ```
+  ```bash
+  set http_proxy=http://edcguest:edcguest@172.31.102.29:3128
+  set https_proxy=http://edcguest:edcguest@172.31.102.29:3128
+  ```
 - For LAN Configuration Settings, [follow this](lan/README.md).
 
 ## For Android:
@@ -22,6 +22,14 @@ Use any one of these and enter appropriate settings in them:
 - [College Proxy](https://play.google.com/store/apps/details?id=com.cell47.College_Proxy&hl=en_IN&gl=US)
 - [Drony](https://play.google.com/store/apps/details?id=org.sandrob.drony&hl=en_IN&gl=US)
 - [Psiphon Pro (VPN)](https://psiphon.ca/)
+
+## For GNU/Linux, permanent solution:
+
+- Enter proxy port info in System network settings, only web browsers will work. (not needed if you are using the following script).
+
+  and;
+
+- **[Use these scripts.](linux-proxy)**
 
 ## For Linux/Mac terminal, temporary solution:
 
@@ -41,11 +49,6 @@ export FTP_PROXY="http://edcguest:edcguest@172.31.102.29:3128"
 
 You can also add these 6 lines to your `~/.bashrc` (or `~.zshrc` if using `zsh`) or `~/.profile` so that these are exported every time you open a terminal.
 
-## For GNU/Linux, permanent solution:
-
-- Enter proxy port info in System network settings, only web browsers will work. (not needed if you are using the following script).
-- [Use these scripts.](linux-proxy)
-
 ## For MacOS:
 
 Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [this](https://support.apple.com/en-in/guide/safari/ibrw1053/mac).
@@ -59,19 +62,20 @@ Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [th
 [Follow link.](https://gist.github.com/evantoli/f8c23a37eb3558ab8765)
 
 ## For NPM:
-* Applying Proxy:
- 
-    ```bash
-    npm config set proxy http://edcguest:edcguest@172.31.102.29:3128
-    npm config set https-proxy http://edcguest:edcguest@172.31.102.29:3128
-    ```
 
-* Removing Proxy:
+- Applying Proxy:
 
-    ```bash
-    npm config rm proxy
-    npm config rm https-proxy
-    ```
+  ```bash
+  npm config set proxy http://edcguest:edcguest@172.31.102.29:3128
+  npm config set https-proxy http://edcguest:edcguest@172.31.102.29:3128
+  ```
+
+- Removing Proxy:
+
+  ```bash
+  npm config rm proxy
+  npm config rm https-proxy
+  ```
 
 ## List of proxies available:
 
@@ -79,4 +83,4 @@ Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [th
 
 <hr>
 
-*Have a suggestion? Create a git issue or contact CC Coordinators!*
+_Have a suggestion? Create a GitHub issue or contact CC Coordinators!_
