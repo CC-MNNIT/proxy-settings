@@ -61,6 +61,20 @@ Try [this](https://support.apple.com/en-in/guide/mac-help/mchlp2591/mac) and [th
 
 [Follow link.](https://gist.github.com/evantoli/f8c23a37eb3558ab8765)
 
+```bash
+add Proxy in GIT Bash
+git config --global http.proxy http://edcguest:edcguest@172.31.102.29:3128
+
+Unset Proxy from Git Bash
+
+git config --global --unset http.proxy
+git config --global --unset http.https://domain.com.proxy
+
+git config --global --unset http.sslVerify
+git config --global --unset http.https://domain.com.sslVerify
+
+```
+
 ## For NPM:
 
 - Applying Proxy:
