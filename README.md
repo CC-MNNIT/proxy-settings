@@ -25,11 +25,18 @@ Use any one of these and enter appropriate settings in them:
 
 ## For GNU/Linux, permanent solution:
 
+**Recommended - [mnnit-proxy](https://github.com/CC-MNNIT/mnnit-proxy)**: one-command installer that makes ALL apps work through the college proxy (like Proxifier). Guided hostel/IP setup, auto start/stop with LAN cable, works on Arch & Ubuntu.
+
+<details>
+<summary>Other methods</summary>
+
 - Enter proxy port info in System network settings, only web browsers will work. (not needed if you are using the following script).
 
   and;
 
 - **[Use these scripts](linux-proxy)**. Read the README present at the link.
+
+</details>
 
 ## For Linux/Mac terminal, temporary solution:
 
